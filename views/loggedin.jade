@@ -1,0 +1,61 @@
+extends layout
+
+block content
+    .container
+      .navbar.navbar-inverse
+          .navbar-inner
+              .container
+                a.btn.btn-navbar(data-toggle='collapse', data-target='.navbar-inverse-collapse')
+                  span.icon-bar
+                  span.icon-bar
+                  span.icon-bar
+                a.brand(href='#') Geo Social
+                .nav-collapse.collapse.navbar-inverse-collapse
+                  ul.nav
+                    li.active
+                      a(href='#') Home
+                  form.navbar-search.pull-left(action='')
+                    input.search-query.span2(type='text', placeholder='Search')
+                  ul.nav.pull-right
+                    li.dropdown
+                      a.dropdown-toggle(href='#', data-toggle='dropdown')
+                        | #{user.social} actions
+                        b.caret
+                      ul.dropdown-menu
+                        li
+                          a(href='/instagram/self/feed') My photos
+                        li
+                          a(href='#') Something else here
+                        li.divider
+                        li.nav-header Nav header
+                        li
+                          a(href='#') Separated link
+                        li
+                          a(href='#') One more separated link
+                    li.divider-vertical
+                    li.dropdown
+                      a.dropdown-toggle(href='#', data-toggle='dropdown')
+                        | #{user.name}
+                        b.caret
+                      ul.dropdown-menu
+                        li
+                          a(href='/instagram/profile') My profile
+                        li
+                          a(href='#') Settings
+                        li.divider
+                        li
+                          a(href='/logout') Logout
+                //
+                   /.nav-collapse 
+            //
+               /navbar-inner 
+          //
+             /navbar 
+
+
+
+
+
+
+
+
