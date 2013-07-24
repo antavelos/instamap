@@ -1,2 +1,2 @@
-instagram
+Instamap
 =========
