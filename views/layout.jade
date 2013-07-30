@@ -2,11 +2,49 @@
 html(lang='en')
 head
     meta(charset='utf-8')
-    title= title
+    title Geo Social
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css')
+    link(rel='stylesheet', href='http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css')
+    link(rel='stylesheet', href='https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css')
+    script(src='https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js')
+    script(src='https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js')
+    link(href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800', rel='stylesheet', type='text/css')    
     link(rel='stylesheet', href='/stylesheets/style.css')
 
+   
   body
+    block navbar
     block content
-script(src="http://code.jquery.com/jquery.js")
-script(src="/libs/bootstrap/js/bootstrap.js")   
+
+    .row-fluid.faq
+      .span10.offset1
+        h3 FAQ
+        #accordion2.accordion
+          .accordion-group
+            .accordion-heading
+              a.accordion-toggle(data-toggle='collapse', data-parent='#accordion2', href='#collapseOne')
+                | What does FAQ stand for?
+            #collapseOne.accordion-body.collapse
+              .accordion-inner
+                | Frequently Asked Question.
+          .accordion-group
+            .accordion-heading
+              a.accordion-toggle(data-toggle='collapse', data-parent='#accordion2', href='#collapseTwo')
+                | What's a Frequently Asked Question?
+            #collapseTwo.accordion-body.collapse
+              .accordion-inner
+                | A question which is commonly asked by users.
+    .row-fluid.footer
+      .span12
+        p
+          | This work is licensed under
+          | the
+          a(href='http://creativecommons.org/licenses/by-sa/3.0/')
+            | CC
+            | By-SA 3.0
+          | , without all the cruft that would otherwise be
+          | put at the bottom of the page.
+
+

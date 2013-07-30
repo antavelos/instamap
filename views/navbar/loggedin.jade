@@ -1,0 +1,47 @@
+
+mixin navbar(user)
+  .navbar.navbar-inverse.navbar-fixed-top
+    .navbar-inner
+      .container
+        button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.brand(href='#') Geo Social
+        .nav-collapse.collapse
+          ul.nav
+            li.active
+              a(href='#') Home
+            li
+              a(href='#about') About
+            li
+              a(href='#contact') Contact
+          
+          ul.nav.pull-right
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | #{user.social} actions
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='/instagram/self/feed') Feed
+                li
+                  a(href='/instagram/media/recent') My photos
+                li
+                  a(href='/instagram/self/media/liked') What I have liked
+                li
+                  a(href='/instagram/self/media/likedme') Who has liked me
+            li.divider-vertical
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | #{user.name}
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='/instagram/user/profile') My profile
+                li
+                  a(href='#') Settings
+                li.divider
+                li
+                  a(href='/logout') Logout
+

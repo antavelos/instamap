@@ -18,7 +18,7 @@ var InstagramStrategy = require('passport-instagram').Strategy;
 function ensureAuthenticated(req, res, next){
 	if (req.isAuthenticated())
 		return next();
-	res.redirect('/');
+	
 }
 
 passport.serializeUser(function(user, done){
@@ -126,14 +126,17 @@ app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email', '
 app.get('/auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/',  successRedirect: '/loggedin'}));
 app.get('/auth/twitter', passport.authenticate('twitter'));
 app.get('/auth/twitter/callback', passport.authenticate('twitter', { failureRedirect: '/',  successRedirect: '/loggedin'}));
-app.get('/auth/instagram', passport.authenticate('instagram'));
 app.get('/auth/instagram/callback', passport.authenticate('instagram', { failureRedirect: '/',  successRedirect: '/loggedin'}));
+app.get('/auth/instagram', passport.authenticate('instagram'));
 app.get('/logout', function(req, res){
 	req.logOut(),
 	res.redirect('/');
 });
-app.get('/instagram/profile', routes.userProfile);
+app.get('/instagram/user/profile', routes.userProfile);
+app.get('/instagram/media/recent', routes.mediaRecent);
 app.get('/instagram/self/feed', routes.selfFeed);
+app.get('/instagram/self/media/liked', routes.mediaLiked);
+app.get('/instagram/self/media/likedme', routes.mediaLikedMe);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

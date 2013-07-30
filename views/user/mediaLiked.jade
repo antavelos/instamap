@@ -1,0 +1,14 @@
+extends ../layout
+
+block navbar
+    include ../navbar/loggedin
+    .container
+      mixin navbar(user)
+
+block content
+
+    .container                          
+        - for (var i = 0; i < images.length; ++i) {
+            img(src=images[i])
+        - }
+        

@@ -11,8 +11,8 @@ module.exports = {
 			url: 'http://localhost:5000/'			
 		},
 		instagram: {
-			appKey: '68ac4517f7314a6e82ca354377714a6f',
-			appSecret: '2fca0c4164d548b9b50b3d56b28b4655',
+			appKey: 'e33a8515b0cc4bc8aef4e7b086b736b1',
+			appSecret: 'b50e5753efaa40ff8953e24fb8126616',
 			url: 'http://localhost:5000/'			
 		},
 		dbUrl: 'mongodb://localhost/test'

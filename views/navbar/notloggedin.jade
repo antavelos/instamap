@@ -1,0 +1,32 @@
+.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container
+      button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.brand(href='#') Geo Social
+      .nav-collapse.collapse
+        ul.nav
+          li.active
+            a(href='#') Home
+          li
+            a(href='#about') About
+          li
+            a(href='#contact') Contact
+        
+        ul.nav.pull-right
+          li.dropdown
+            a.dropdown-toggle(href='#', data-toggle='dropdown')
+              | Login with...
+              b.caret
+            ul.dropdown-menu
+              li
+                a(href='/auth/facebook') Facebook
+              li
+                a(href='/auth/twitter') Twitter
+              li
+                a(href='/auth/instagram') Instagram
+              li.divider
+              li
+                a(href='#') Create new account

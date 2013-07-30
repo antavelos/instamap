@@ -1,95 +1,14 @@
 extends layout
 
-block content
-
+block navbar  
     .container
-      .navbar.navbar-inverse
-          .navbar-inner
-              .container
-                a.btn.btn-navbar(data-toggle='collapse', data-target='.navbar-inverse-collapse')
-                  span.icon-bar
-                  span.icon-bar
-                  span.icon-bar
-                a.brand(href='#') 
-                  i.icon-globe.icon-white 
-                  |  Geo Social
-                .nav-collapse.collapse.navbar-inverse-collapse
-                  ul.nav
-                    li.active
-                      a(href='#') Home
-                    li.active
-                      a(href='/instagram') Test link
-                  form.navbar-search.pull-left(action='')
-                    input.search-query.span2(type='text', placeholder='Search')
-                  ul.nav.pull-right
-                    li.dropdown
-                      a.dropdown-toggle(href='#', data-toggle='dropdown')
-                        | Login with...
-                        b.caret
-                      ul.dropdown-menu
-                        li
-                          a(href='/auth/facebook') Facebook
-                        li
-                          a(href='/auth/twitter') Twitter
-                        li
-                          a(href='/auth/instagram') Instagram
-                        li.divider
-                        li
-                          a(href='#') Create new account
-                //
-                   /.nav-collapse 
-            //
-               /navbar-inner 
-          //
-             /navbar 
+      include navbar/notloggedin
 
-      .hero-unit
+block content
+    .container
+      .row-fluid.heading
+        .span12
           h1 Geo Social
-          p Some thing about Geo Social
-          p
-              a.btn.btn-primary.btn-large
-                | Learn more
-
-        #myCarousel.carousel.slide
-            ol.carousel-indicators
-              li.active(data-target='#myCarousel', data-slide-to='0')
-              li(data-target='#myCarousel', data-slide-to='1')
-              li(data-target='#myCarousel', data-slide-to='2')
-            .carousel-inner
-              .item.active
-                img(src='/images/bootstrap-mdo-sfmoma-01.jpg', alt='')
-                .carousel-caption
-                  h4 First Thumbnail label
-                  p
-                    | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-              .item
-                img(src='/images/bootstrap-mdo-sfmoma-02.jpg', alt='')
-                .carousel-caption
-                  h4 Second Thumbnail label
-                  p
-                    | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-              .item
-                img(src='/images/bootstrap-mdo-sfmoma-03.jpg', alt='')
-                .carousel-caption
-                  h4 Third Thumbnail label
-                  p
-                    | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-            a.left.carousel-control(href='#myCarousel', data-slide='prev') ‹
-            a.right.carousel-control(href='#myCarousel', data-slide='next') ›
-
-
-      #accordion2.accordion
-          .accordion-group
-              .accordion-heading
-                a.accordion-toggle(data-toggle='collapse', data-parent='#accordion2', href='#collapseOne')
-                  | Question 1
-              #collapseOne.accordion-body.collapse.in
-                .accordion-inner
-                  | Anim pariatur cliche...Anim pariatur cliche...Anim pariatur cliche...Anim pariatur cliche...Anim pariatur cliche...Anim pariatur cliche...
-            .accordion-group
-              .accordion-heading
-                a.accordion-toggle(data-toggle='collapse', data-parent='#accordion2', href='#collapseTwo')
-                  | Question 2
-              #collapseTwo.accordion-body.collapse
-                .accordion-inner
-                  | Anim pariatur cliche...Anim pariatur cliche...Anim pariatur cliche...Anim pariatur cliche...Anim pariatur cliche...Anim pariatur cliche...
+      .row-fluid.subheading
+        .span12
+          p.lead One sentence description about Geo Social.
